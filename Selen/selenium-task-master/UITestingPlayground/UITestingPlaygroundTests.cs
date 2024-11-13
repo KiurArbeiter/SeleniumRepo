@@ -5,6 +5,9 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.BiDi.Modules.Script;
+using System.Numerics;
+using System.Threading.Tasks;
 
 namespace UITestingPlaygroundTests
 {
@@ -17,11 +20,10 @@ namespace UITestingPlaygroundTests
         [SetUp]
         public void SetUp()
         {
-            driver = new ChromeDriver(@"C:\Users\opilane\Source\repos\selenium-task-master\selenium-task-master\UITestingPlayground\drivers");
+            driver = new ChromeDriver(@"C:\Users\opilane\source\repos\Selens\SeleniumRepo\Selen\selenium-task-master\UITestingPlayground\drivers");
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
-
         [Test]
         public void TestButtonHiddenLayers()
         {
